@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.0.
+Contract version 0.1.1.
 
 ## Purpose and admission
 
@@ -52,7 +52,7 @@ Use Exa for data-backed external research, related projects and implementation e
 
 Follow Evidence First for source authority, freshness, counterevidence and the claim ledger. Apply the selected Pstack verification guidance to actual artifacts; principle-prove-it-works supplies the artifact standard when applicable, rather than being the sole permitted skill. Neither another agent’s conclusion nor a matching file hash proves a claim true.
 
-If a source or tool is unavailable, identify which conclusions it prevents. Continue unaffected research, but do not present missing history or runtime proof as established fact.
+Before declaring a source, helper or tool unavailable, inspect its resolved location or capture the actual capability/access failure. Distinguish an uninspected path from a missing resource. If a source or tool is unavailable, identify which conclusions it prevents. Continue unaffected research, but do not present missing history or runtime proof as established fact.
 
 ### Existing local checks
 
@@ -68,7 +68,7 @@ A passing test establishes only what its assertions and environment support. Moc
 
 Every substantive report requires a new independent reviewer, including a second verification pass. Use a supported fresh context; in Codex explicitly set fork_turns: none. Do not reuse a previous reviewer as the fresh independent lane.
 
-Give the reviewer the research question, authoritative requirements, exact baseline, relevant guidance, proposed factual claims, material conflicts and safe source locators/raw artifacts. Exclude the researcher’s conversation, self-assessment and previous verdicts. Claims are objects to challenge, not accepted facts.
+Give the reviewer the research question, authoritative requirements, exact baseline, relevant guidance, the complete proposed answer and claim ledger, material conflicts and safe source locators/raw artifacts. Include operational assertions about unavailable resources, checks and limitations in review coverage, not just the numbered project findings. After review, add only the factual review receipt; new consequential claims require renewed source checking and independent review. Exclude the researcher’s conversation, self-assessment and previous verdicts. Claims are objects to challenge, not accepted facts.
 
 The reviewer must read applicable installed Pstack verification guidance and Evidence First, inspect decisive sources independently, look for counterevidence and check whether each consequential claim is supported within its stated scope. Reviewing wording or returning a bare PASS is insufficient. Discovery workers do not automatically satisfy independent verification.
 

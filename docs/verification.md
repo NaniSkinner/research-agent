@@ -30,3 +30,7 @@ Both reviews examined the pre-commit filesystem. Neither selected a live profile
 ## Later desktop startup resolution
 
 The previous missing-role result is historical. A matching personal profile registration followed by a newly created desktop chat exposed and launched project-researcher. Supported child history records instruction reads. See desktop-startup-result.md for precise metadata limits and pending research acceptance. No implementation or contract changes accompanied this registration.
+
+## Controlled Cedar correction, version 0.1.1
+
+The ordinary fresh agent and dedicated researcher both recovered the main source mechanisms. The researcher then asserted an unavailable management helper without checking the package checkout root; the helper existed. Its source review covered numbered project claims but not that later operational assertion. Source-root instructions now name the checkout boundary and helper, personal-profile consistency has a direct read-only command, and complete-answer review explicitly covers operational limitations. A fresh implementation reviewer checked the five-file diff and ran the full 15-test suite successfully. Three new helper checks failed before implementation and passed afterward. Behavioral reruns and safeguards are recorded separately; no real-work run is authorized.

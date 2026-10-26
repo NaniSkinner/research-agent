@@ -92,6 +92,26 @@ class PackageTests(unittest.TestCase):
         self.assertTrue(contract.exists())
         self.assertFalse((self.workspace / '.codex/agents/project-researcher.toml').exists())
 
+    def test_personal_profile_check_reads_actual_registered_copy(self):
+        staged = self.manage.stage(ROOT, self.workspace)
+        profile = self.workspace / '.codex/agents/project-researcher.toml'
+        checked = self.manage.check_profile(ROOT, profile)
+        self.assertEqual(checked['profile_sha256'], staged['profile_sha256'])
+        self.assertEqual(checked['scope'], 'source/profile consistency only')
+
+    def test_personal_profile_check_rejects_stale_instructions(self):
+        source = self.copied_source()
+        self.manage.stage(source, self.workspace)
+        profile = self.workspace / '.codex/agents/project-researcher.toml'
+        contract = source / 'project-research/references/contract.md'
+        contract.write_text(contract.read_text() + '\nUpdated instruction.\n')
+        with self.assertRaises(ValueError):
+            self.manage.check_profile(source, profile)
+
+    def test_personal_profile_check_rejects_missing_path(self):
+        with self.assertRaises(ValueError):
+            self.manage.check_profile(ROOT, self.workspace / 'absent.toml')
+
     def test_dependency_check_detects_missing_required_leaf(self):
         pstack = self.workspace / 'resources'
         evidence = self.workspace / 'evidence.md'

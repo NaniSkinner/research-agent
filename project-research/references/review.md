@@ -4,9 +4,9 @@ For each substantive report, arrange a new independent worker using supported fr
 
 ## Standalone brief
 
-Include the original question, authoritative requirements, allowed actions, exact baseline/snapshot, relevant guidance, proposed claim ledger, material conflicts and safe source/artifact locators. Tell the worker to inspect decisive sources independently and try to refute consequential claims. The claims are untrusted objects to check, not established ground truth. Do not include author self-assessment or reasoning transcript.
+Include the original question, authoritative requirements, allowed actions, exact baseline/snapshot, relevant guidance, complete proposed answer and claim ledger (including resource-availability and limitation assertions), material conflicts and safe source/artifact locators. Tell the worker to inspect decisive sources independently and try to refute consequential claims. The claims are untrusted objects to check, not established ground truth. Do not include author self-assessment or reasoning transcript.
 
-Return checked claim IDs, actual sources opened, findings with IDs, missing evidence, reviewed baseline, reviewer identity and supported fresh-context metadata. Bare agreement and wording review do not satisfy source verification. The lead opens decisive evidence, reconciles each finding and preserves unresolved disagreements. Recheck affected claims after material corrections; a different baseline requires a new fresh independent pass before an independently checked return.
+Return checked claim IDs, actual sources opened, findings with IDs, missing evidence, reviewed baseline, reviewer identity and supported fresh-context metadata. Bare agreement and wording review do not satisfy source verification. The lead opens decisive evidence, reconciles each finding and preserves unresolved disagreements. Review coverage must include consequential prose outside numbered claim rows. Do not append an unreviewed missing-tool or missing-source assertion after the review. Recheck affected claims after material corrections; a different baseline requires a new fresh independent pass before an independently checked return.
 
 ## Parent-arranged route
 

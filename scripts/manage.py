@@ -29,7 +29,7 @@ def profile_text(source):
     instructions = (
         'You are the dedicated project-researcher. Read ' + str(skill / 'SKILL.md') +
         ' and its supporting resources before work. The canonical mandatory contract follows. '
-        'Use live caller inputs, not project-specific defaults.\n\n' +
+        'Use live caller inputs, not project-specific defaults. The package source checkout is ' + str(source) + '. The management helper is ' + str(source / 'scripts/manage.py') + '.\n\n' +
         (skill / 'references/contract.md').read_text()
     )
     return ('name = "project-researcher"\n'
@@ -121,6 +121,18 @@ def remove(workspace):
     return {'removed': True, 'workspace': receipt['workspace']}
 
 
+def check_profile(source, profile):
+    source = Path(source).expanduser().resolve(strict=True)
+    profile = Path(profile).expanduser()
+    if profile.is_symlink() or not profile.is_file():
+        raise ValueError(f'Registered profile unavailable or linked: {profile}')
+    if profile.read_text() != profile_text(source):
+        raise ValueError('Registered profile does not match current source contract')
+    return {'source': str(source), 'profile': str(profile.resolve()),
+            'contract_sha256': digest(source / 'project-research/references/contract.md'),
+            'profile_sha256': digest(profile), 'scope': 'source/profile consistency only'}
+
+
 def doctor(pstack, evidence):
     pstack = Path(pstack).expanduser().resolve()
     evidence = Path(evidence).expanduser()
@@ -176,6 +188,9 @@ def main():
         command.add_argument('--workspace', type=Path, required=True)
         if name == 'stage':
             command.add_argument('--source', type=Path, default=Path(__file__).resolve().parents[1])
+    command = sub.add_parser('check-profile')
+    command.add_argument('--source', type=Path, default=Path(__file__).resolve().parents[1])
+    command.add_argument('--profile', type=Path, required=True)
     command = sub.add_parser('doctor')
     command.add_argument('--pstack-skills', type=Path, required=True)
     command.add_argument('--evidence-first', type=Path, required=True)
@@ -187,6 +202,8 @@ def main():
             result = stage(args.source, args.workspace)
         elif args.command in ('check', 'remove'):
             result = globals()[args.command](args.workspace)
+        elif args.command == 'check-profile':
+            result = check_profile(args.source, args.profile)
         elif args.command == 'doctor':
             result = doctor(args.pstack_skills, args.evidence_first)
         else:
