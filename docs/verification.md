@@ -34,3 +34,7 @@ The previous missing-role result is historical. A matching personal profile regi
 ## Controlled Cedar correction, version 0.1.1
 
 The ordinary fresh agent and dedicated researcher both recovered the main source mechanisms. The researcher then asserted an unavailable management helper without checking the package checkout root; the helper existed. Its source review covered numbered project claims but not that later operational assertion. Source-root instructions now name the checkout boundary and helper, personal-profile consistency has a direct read-only command, and complete-answer review explicitly covers operational limitations. A fresh implementation reviewer checked the five-file diff and ran the full 15-test suite successfully. Three new helper checks failed before implementation and passed afterward. Behavioral reruns and safeguards are recorded separately; no real-work run is authorized.
+
+## First two controlled stages complete
+
+See controlled-cedar-results.md. The corrected researcher found the source facts, used a different reviewer on a second pass and returned verification-blocked when delegation was prohibited. Full selected-Pstack compliance and context-configuration observability remain incomplete. No real-work run or general promotion was performed.
