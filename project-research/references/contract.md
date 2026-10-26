@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.1.
+Contract version 0.1.2.
 
 ## Purpose and admission
 
@@ -12,7 +12,7 @@ Return findings and unknowns. Leave plan revision, product decisions and impleme
 
 ### Start and clarify
 
-Read this contract at startup and after context loss. Resolve the installed Pstack catalog and read its routing/runtime guidance and the applicable workflow and leaf skills, together with Evidence First. Choose skills based on the question and evidence gap; do not limit research to a fixed shortlist. Use their existing procedures rather than recreating them. Do not assume inherited Poteto Mode persistence.
+Read this contract at startup and after context loss. Resolve the installed Pstack catalog and read its routing/runtime guidance and the applicable workflow and leaf skills, together with Evidence First. Choose skills based on the question and evidence gap; do not limit research to a fixed shortlist. Use their existing procedures rather than recreating them. Initialize the current assignment explicitly from the installed guidance and disclose current-turn-only operation when no trusted sticky receipt is available. Do not assume inherited Poteto Mode persistence. Read references/workflow.md and retain a visible selected-workflow receipt with the final report; required steps cannot disappear when the answer is shortened.
 
 Establish the question, target repository, authoritative requirements, relevant revision, research output directory, exclusions and existing execution authority. Infer information available from the task instead of demanding a long intake prompt. Ask the caller about consequential ambiguity. For a direct request, ask Nani. Product decisions or permission changes go to Nani through the caller. If a clarification exchange is unavailable, return the exact unresolved question and continue only unaffected research.
 
@@ -20,7 +20,7 @@ Use the actual registered Research Agent profile. If profile dispatch is unavail
 
 ### Select useful skills and tools
 
-Pstack is the workflow foundation. Use its installed routing guidance to select relevant research, explanation, history and verification skills. Investigation is the usual starting point; how, why, swarm and principle-prove-it-works are examples, not an exclusive menu or a requirement to run every skill. Follow the selected workflow’s actual steps and record material omissions or capability limits. Do not copy Pstack procedures into a competing controller.
+Pstack is the workflow foundation. Use its installed routing guidance to select relevant research, explanation, history and verification skills. Investigation is the usual starting point; how, why, swarm and principle-prove-it-works are examples, not an exclusive menu or a requirement to run every skill. Follow the selected workflow’s actual steps and record their evidence or justified dispositions using the owner’s current step names. The receipt references installed procedures; it does not replace them. Required blocked or skipped steps prevent a workflow-complete claim. An explanation worker required by a selected skill and the independent evidence reviewer are separate assignments. Do not copy Pstack procedures into a competing controller.
 
 Use other available Codex skills and tools when they fill a specific research need. This may include BMAD resources for interpreting existing project artifacts, Nessie for prior work and decisions, Exa for external evidence, and relevant repository/framework documentation or code-search tools. Discover and read their installed instructions before using them; availability and compatibility must be checked rather than assumed. BMAD or another workflow must not silently take over orchestration, generate a new plan, change project artifacts or broaden this research assignment.
 
@@ -66,7 +66,7 @@ A passing test establishes only what its assertions and environment support. Moc
 
 ### Independent verification before return
 
-Every substantive report requires a new independent reviewer, including a second verification pass. Use a supported fresh context; in Codex explicitly set fork_turns: none. Do not reuse a previous reviewer as the fresh independent lane.
+Every substantive report requires a new independent reviewer, including a second verification pass. Use a supported fresh context; in Codex explicitly set fork_turns: none. Distinguish a recorded dispatch request from host-confirmed context isolation. A new worker identity or an authored receipt alone is not host confirmation. If the host does not expose confirmation, return source-reviewed-context-unverified rather than independently-checked, and state what was observed and what remains unverified. Do not reuse a previous reviewer as the fresh independent lane.
 
 Give the reviewer the research question, authoritative requirements, exact baseline, relevant guidance, the complete proposed answer and claim ledger, material conflicts and safe source locators/raw artifacts. Include operational assertions about unavailable resources, checks and limitations in review coverage, not just the numbered project findings. After review, add only the factual review receipt; new consequential claims require renewed source checking and independent review. Exclude the researcher’s conversation, self-assessment and previous verdicts. Claims are objects to challenge, not accepted facts.
 
@@ -94,4 +94,4 @@ For example, report that a documented completion signal is absent from an inspec
 
 Research may finish with supported findings and explicit unknowns. A checked research report is not product readiness or approval of the caller’s plan. Return through the normal delegated result; do not independently message other chats, update Nessie, start implementation or launch another workflow without live user authorization.
 
-Read references/review.md for the independent-review protocol and report receipt. Read references/pstack.md before selecting workflows.
+Read references/review.md for the independent-review protocol and report receipt. Read references/pstack.md before selecting workflows and references/workflow.md for evidence of selected-step completion. On an ordinary follow-up, reconcile current source and existing instructions; after actual context loss or a relevant instruction-version change, reload the contract and applicable resources before continuing. Do not claim a context-recovery check without observing such a transition.

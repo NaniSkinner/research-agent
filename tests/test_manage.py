@@ -119,8 +119,19 @@ class PackageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.manage.doctor(pstack, evidence)
 
+    def report_with_workflow(self):
+        return {
+            'status': 'independently-checked', 'baseline': 'abc',
+            'claims': [{'id': 'c1', 'status': 'supported', 'source': 'src/app.py:12', 'category': 'observed-current-fact'}],
+            'workflow': {'playbook': 'resolved/playbook.md', 'initialization': 'current-turn-only',
+                         'persistence': 'unverified', 'completion': 'complete',
+                         'steps': [{'name': 'Owner-defined applicable step', 'required': True, 'status': 'done', 'evidence': 'report:source-map'}]},
+            'review': {'reviewer_id': 'fresh-1', 'fork_turns': 'none', 'baseline': 'abc',
+                       'context_evidence': {'kind': 'host-confirmed', 'locator': 'supported-dispatch:abc'},
+                       'checked_claims': ['c1'], 'findings': [], 'dispositions': []}}
+
     def test_valid_receipt_is_structural_only(self):
-        report = {'status': 'independently-checked', 'baseline': 'abc', 'claims': [{'id': 'c1', 'status': 'supported', 'source': 'src/app.py:12', 'category': 'observed-current-fact'}], 'review': {'reviewer_id': 'fresh-1', 'fork_turns': 'none', 'baseline': 'abc', 'checked_claims': ['c1'], 'findings': [], 'dispositions': []}}
+        report = self.report_with_workflow()
         self.manage.validate_report(report)
         for key, value in [('fork_turns', 'all'), ('baseline', 'different'), ('reviewer_id', '')]:
             broken = copy.deepcopy(report)
@@ -132,8 +143,62 @@ class PackageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.manage.validate_report(broken)
 
+    def test_reported_context_cannot_pass_full_independence(self):
+        report = self.report_with_workflow()
+        report['review']['context_evidence']['kind'] = 'requested-only'
+        with self.assertRaises(ValueError):
+            self.manage.validate_report(report)
+
+    def test_source_review_can_preserve_unverified_context(self):
+        report = self.report_with_workflow()
+        report['status'] = 'source-reviewed-context-unverified'
+        report['review']['context_evidence'] = {'kind': 'requested-only', 'locator': 'caller:spawn-request'}
+        self.manage.validate_report(report)
+
+    def test_missing_workflow_cannot_pass_reviewed_report(self):
+        report = self.report_with_workflow()
+        del report['workflow']
+        with self.assertRaises(ValueError):
+            self.manage.validate_report(report)
+
+    def test_required_blocked_step_prevents_workflow_completion(self):
+        report = self.report_with_workflow()
+        report['workflow']['steps'][0]['status'] = 'blocked'
+        with self.assertRaises(ValueError):
+            self.manage.validate_report(report)
+
+    def test_partial_workflow_can_be_reported_without_full_pass(self):
+        report = self.report_with_workflow()
+        report['status'] = 'source-reviewed-context-unverified'
+        report['review']['context_evidence']['kind'] = 'requested-only'
+        report['workflow']['steps'][0]['status'] = 'blocked'
+        report['workflow']['completion'] = 'partial'
+        self.manage.validate_report(report)
+
+    def test_trusted_persistence_requires_receipt(self):
+        report = self.report_with_workflow()
+        report['workflow']['initialization'] = 'trusted-sticky'
+        report['workflow']['persistence'] = 'verified'
+        with self.assertRaises(ValueError):
+            self.manage.validate_report(report)
+
+    def test_verified_persistence_requires_consistent_initialization(self):
+        report = self.report_with_workflow()
+        report['workflow']['persistence'] = 'verified'
+        report['workflow']['sticky_receipt'] = 'supported:receipt'
+        with self.assertRaises(ValueError):
+            self.manage.validate_report(report)
+
+    def test_empty_applicability_cannot_claim_workflow_completion(self):
+        report = self.report_with_workflow()
+        report['workflow']['steps'][0]['required'] = False
+        report['workflow']['steps'][0]['status'] = 'not-applicable'
+        with self.assertRaises(ValueError):
+            self.manage.validate_report(report)
+
     def test_review_findings_require_explicit_disposition(self):
-        report = {'status': 'independently-checked', 'baseline': 'abc', 'claims': [], 'review': {'reviewer_id': 'fresh-1', 'fork_turns': 'none', 'baseline': 'abc', 'checked_claims': [], 'findings': [{'id': 'r1'}], 'dispositions': []}}
+        report = self.report_with_workflow()
+        report['review']['findings'] = [{'id': 'r1'}]
         with self.assertRaises(ValueError):
             self.manage.validate_report(report)
 

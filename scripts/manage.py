@@ -149,7 +149,7 @@ def doctor(pstack, evidence):
 
 def validate_report(report):
     """Check declared structure, never semantic truth or actual runtime metadata."""
-    statuses = {'independently-checked', 'verification-blocked', 'needs-clarification'}
+    statuses = {'independently-checked', 'source-reviewed-context-unverified', 'verification-blocked', 'needs-clarification'}
     if report.get('status') not in statuses or not isinstance(report.get('baseline'), str) or not report['baseline'].strip():
         raise ValueError('Missing status or baseline')
     claims = report.get('claims')
@@ -163,9 +163,36 @@ def validate_report(report):
         ids.append(claim['id'])
     if len(set(ids)) != len(ids):
         raise ValueError('Duplicate claim ids')
-    if report['status'] != 'independently-checked':
+    if report['status'] not in {'independently-checked', 'source-reviewed-context-unverified'}:
         return
+    workflow = report.get('workflow', {})
+    if not isinstance(workflow, dict) or not workflow.get('playbook') or workflow.get('initialization') not in {'current-turn-only', 'trusted-sticky'} or workflow.get('persistence') not in {'unverified', 'verified'}:
+        raise ValueError('Missing workflow selection or explicit initialization/persistence state')
+    if (workflow['initialization'], workflow['persistence']) not in {('current-turn-only', 'unverified'), ('trusted-sticky', 'verified')}:
+        raise ValueError('Initialization and persistence declarations conflict')
+    if (workflow['initialization'] == 'trusted-sticky' or workflow['persistence'] == 'verified') and not workflow.get('sticky_receipt'):
+        raise ValueError('Trusted persistence requires an actual receipt locator')
+    steps = workflow.get('steps')
+    if not isinstance(steps, list) or not steps:
+        raise ValueError('Missing selected-workflow step receipts')
+    for step in steps:
+        if not isinstance(step, dict) or not step.get('name') or type(step.get('required')) is not bool or step.get('status') not in {'done', 'blocked', 'skipped', 'not-applicable'} or not step.get('evidence'):
+            raise ValueError('Each workflow step needs a name, applicability, disposition and evidence')
+    required_steps = [step for step in steps if step['required']]
+    if not required_steps:
+        raise ValueError('Selected workflow must identify applicable required steps')
+    complete = all(step['status'] == 'done' for step in required_steps)
+    expected = 'complete' if complete else 'partial'
+    if workflow.get('completion') != expected or (report['status'] == 'independently-checked' and not complete):
+        raise ValueError('Required unfinished steps cannot be reported as workflow completion')
     review = report.get('review', {})
+    if not isinstance(review, dict):
+        raise ValueError('Missing review receipt')
+    context = review.get('context_evidence', {})
+    if not isinstance(context, dict) or context.get('kind') not in {'host-confirmed', 'requested-only', 'unavailable'} or not context.get('locator'):
+        raise ValueError('Missing explicit context-evidence quality and locator')
+    if report['status'] == 'independently-checked' and context['kind'] != 'host-confirmed':
+        raise ValueError('Reported/requested context does not establish host-confirmed independence')
     if not review.get('reviewer_id') or review.get('fork_turns') != 'none' or review.get('baseline') != report['baseline']:
         raise ValueError('Missing fresh reviewer identity/context or matching baseline')
     checked = review.get('checked_claims')
