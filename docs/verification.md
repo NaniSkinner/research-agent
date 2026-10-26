@@ -26,3 +26,7 @@ Source review and passing tests do not establish that a real model obeys the con
 A fresh worker (/root/research_package_review, fork_turns none) inspected source and ran the original eight checks, finding two P2 packaging issues. The lead reproduced them with four new regression checks and fixed them. A second newly spawned worker (/root/research_package_final_check, fork_turns none), given current source and requirements without earlier verdicts, inspected the package and ran all 12 tests successfully. It found no blockers for an initial private source release and isolated test preparation.
 
 Both reviews examined the pre-commit filesystem. Neither selected a live profile, called connectors, used product systems or established behavioral reliability. The source was committed after review; only documentation of results and task completion was added afterward.
+
+## Later desktop startup resolution
+
+The previous missing-role result is historical. A matching personal profile registration followed by a newly created desktop chat exposed and launched project-researcher. Supported child history records instruction reads. See desktop-startup-result.md for precise metadata limits and pending research acceptance. No implementation or contract changes accompanied this registration.
