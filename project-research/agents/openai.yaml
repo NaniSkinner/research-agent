@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Research"
+  short_description: "Brownfield research with independent verification"
+  default_prompt: "Use $project-research to investigate the broader project context and the specific question, returning source-backed findings and unknowns."
