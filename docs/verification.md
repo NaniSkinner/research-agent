@@ -38,3 +38,7 @@ The ordinary fresh agent and dedicated researcher both recovered the main source
 ## First two controlled stages complete
 
 See controlled-cedar-results.md. The corrected researcher found the source facts, used a different reviewer on a second pass and returned verification-blocked when delegation was prohibited. Full selected-Pstack compliance and context-configuration observability remain incomplete. No real-work run or general promotion was performed.
+
+## Workflow evidence correction, versions 0.1.2–0.1.3
+
+See workflow-verification-results.md for implementation changes, fresh source reviews, 23 passing package checks, four latest controlled Cedar cases and a fresh findings assessment. Selected-owner step receipts and honest context/persistence states are implemented. Actual initial/cold startup declarations precede source investigation in observed 0.1.3 traces. Complete review-input payloads, host isolation and explicit early cold-handoff contract reload remain incompletely evidenced. No material false final source claims were found; this is bounded source-research acceptance, not full workflow authentication or general promotion. All 320 installed Pstack files are unchanged. Real-work runs remain paused.
