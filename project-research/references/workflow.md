@@ -2,7 +2,7 @@
 
 Read the actual installed Pstack entry, runtime guidance, chosen playbook and applicable leaf skills. Copy the selected owner's named steps into the run's working note as that owner requires. Pstack owns the step list; this package must not freeze a competing list of skills or rubrics.
 
-Before substantial work, identify the selected workflow and its source/version or hash. Initialize from its runtime/portable guidance. Without a verified sticky receipt, state current-turn-only use and unverified persistence. Do not claim that invoking project-research activates sticky Poteto Mode.
+Before repository inspection or helper execution, publish a short startup receipt identifying the selected workflow and its source/version or hash. Initialize from its runtime/portable guidance. Without a verified sticky receipt, state current-turn-only use and unverified persistence. Do not claim that invoking project-research activates sticky Poteto Mode.
 
 Carry a compact receipt with every substantive report:
 
@@ -14,7 +14,7 @@ A leaf skill's required delegation is not satisfied merely by reading its prompt
 
 Preserve the selected workflow's required report elements and checkpoint in the answer or linked run artifact. The short summary must not erase them. For example, if the installed Investigation workflow calls for a one-line read-only checkpoint and a how-shaped explanation, include those as that owner specifies alongside the evidence ledger. Inspect the current owner for exact text and applicable structure; this example does not replace it.
 
-The independent reviewer checks the complete answer and workflow receipt against actual sources and the selected owner's requirements. Reading an instruction is evidence of a read, not of executing its steps. Required unfinished steps keep workflow completion partial. Source findings can still be useful and returned with explicit limits.
+Give the reviewer the completed explanation artifact (or valid reused artifact), workflow receipt and supported activity/operation locators before dispatch. Missing provenance stays reported-not-reverified; later self-authored receipts do not retroactively establish startup timing. The independent reviewer checks the complete answer and workflow receipt against actual sources and the selected owner's requirements. Reading an instruction is evidence of a read, not of executing its steps. Required unfinished steps keep workflow completion partial. Source findings can still be useful and returned with explicit limits.
 
 On an ordinary follow-up, reconcile the current baseline and invalidation conditions. Actual resume after context loss or an instruction-version change requires reloading the contract and applicable resources. Do not invent a compaction event to satisfy a checklist, or claim resume behavior was exercised by a normal follow-up.
 

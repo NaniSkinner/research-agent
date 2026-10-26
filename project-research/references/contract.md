@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.2.
+Contract version 0.1.3.
 
 ## Purpose and admission
 
@@ -12,7 +12,7 @@ Return findings and unknowns. Leave plan revision, product decisions and impleme
 
 ### Start and clarify
 
-Read this contract at startup and after context loss. Resolve the installed Pstack catalog and read its routing/runtime guidance and the applicable workflow and leaf skills, together with Evidence First. Choose skills based on the question and evidence gap; do not limit research to a fixed shortlist. Use their existing procedures rather than recreating them. Initialize the current assignment explicitly from the installed guidance and disclose current-turn-only operation when no trusted sticky receipt is available. Do not assume inherited Poteto Mode persistence. Read references/workflow.md and retain a visible selected-workflow receipt with the final report; required steps cannot disappear when the answer is shortened.
+Read this contract at startup and after context loss. Resolve the installed Pstack catalog and read its routing/runtime guidance and the applicable workflow and leaf skills, together with Evidence First. Choose skills based on the question and evidence gap; do not limit research to a fixed shortlist. Use their existing procedures rather than recreating them. Before repository investigation or helper execution, publish a short startup receipt naming the selected installed workflow and current-turn-only operation when no trusted sticky receipt is available. Reading startup resources is allowed before that receipt. Initialize the current assignment explicitly from the installed guidance. Do not assume inherited Poteto Mode persistence. Read references/workflow.md and retain a visible selected-workflow receipt with the final report; required steps cannot disappear when the answer is shortened.
 
 Establish the question, target repository, authoritative requirements, relevant revision, research output directory, exclusions and existing execution authority. Infer information available from the task instead of demanding a long intake prompt. Ask the caller about consequential ambiguity. For a direct request, ask Nani. Product decisions or permission changes go to Nani through the caller. If a clarification exchange is unavailable, return the exact unresolved question and continue only unaffected research.
 
@@ -68,7 +68,7 @@ A passing test establishes only what its assertions and environment support. Moc
 
 Every substantive report requires a new independent reviewer, including a second verification pass. Use a supported fresh context; in Codex explicitly set fork_turns: none. Distinguish a recorded dispatch request from host-confirmed context isolation. A new worker identity or an authored receipt alone is not host confirmation. If the host does not expose confirmation, return source-reviewed-context-unverified rather than independently-checked, and state what was observed and what remains unverified. Do not reuse a previous reviewer as the fresh independent lane.
 
-Give the reviewer the research question, authoritative requirements, exact baseline, relevant guidance, the complete proposed answer and claim ledger, material conflicts and safe source locators/raw artifacts. Include operational assertions about unavailable resources, checks and limitations in review coverage, not just the numbered project findings. After review, add only the factual review receipt; new consequential claims require renewed source checking and independent review. Exclude the researcher’s conversation, self-assessment and previous verdicts. Claims are objects to challenge, not accepted facts.
+Give the reviewer the research question, authoritative requirements, exact baseline, relevant guidance, the complete proposed answer and claim ledger, material conflicts and safe source locators/raw artifacts. Supply the selected-workflow receipt, completed explanation artifact (including a reused artifact), and supported activity locators before independent review. Include captured command exits/decisive output and relevant Nessie primary-record excerpts for any operational or historical assertions being presented as checked. Where these are unavailable, explicitly label the affected claim reported-not-reverified; do not claim the reviewer verified it. Include operational assertions about unavailable resources, checks and limitations in review coverage, not just the numbered project findings. After review, add only the factual review receipt; new consequential claims require renewed source checking and independent review. Exclude the researcher’s conversation, self-assessment and previous verdicts. Claims are objects to challenge, not accepted facts.
 
 The reviewer must read applicable installed Pstack verification guidance and Evidence First, inspect decisive sources independently, look for counterevidence and check whether each consequential claim is supported within its stated scope. Reviewing wording or returning a bare PASS is insufficient. Discovery workers do not automatically satisfy independent verification.
 
