@@ -8,6 +8,21 @@ Include the original question, authoritative requirements, allowed actions, exac
 
 Return checked claim IDs, actual sources opened, findings with IDs, missing evidence, reviewed baseline, reviewer identity and supported fresh-context metadata. Bare agreement and wording review do not satisfy source verification. The lead opens decisive evidence, reconciles each finding and preserves unresolved disagreements. Review coverage must include consequential prose outside numbered claim rows. Do not append an unreviewed missing-tool or missing-source assertion after the review. Recheck affected claims after material corrections; a different baseline requires a new fresh independent pass before an independently checked return.
 
+## Fixed review packet
+
+Before dispatch, write the exact standalone brief, complete proposed report, claim ledger, completed explanation and workflow receipt as separate UTF-8 files in the declared research output directory. Preserve decisive command outputs and relevant Nessie primary-message excerpts or Exa page responses as additional evidence files. Scope private excerpts to the research question; never capture credentials or unrelated history.
+
+After inspecting the existing helper, create a new packet:
+
+```text
+python3.12 <source>/scripts/manage.py create-review-packet --output <new-packet-directory> --brief <brief-file> --report <proposed-report-file> --ledger <ledger-file> --explanation <explanation-file> --workflow <workflow-file> --evidence <raw-evidence-file>
+python3.12 <source>/scripts/manage.py check-review-packet <new-packet-directory>
+```
+
+Repeat --evidence for additional files. Pass the chosen packet path and returned packet_id in the fresh reviewer dispatch; its brief must be standalone without inherited author reasoning. The reviewer runs check-review-packet, opens the actual brief/report/ledger/explanation/workflow and decisive evidence files, then inspects original sources independently. Return packet_id, named files opened, checked claims, original findings and evidence limits. Store that original reviewer result separately; the parent rechecks packet identity before reconciling it.
+
+The packet is change-detectable, not tamperproof or authenticated. A successful helper check proves file identity only. Reviewer receipt plus supported file-read records establishes which artifact was opened; it does not prove attention, full initial dispatch payload, exclusion of inherited context or host isolation. Do not upgrade context evidence. If file writing or packet checking is unavailable, return the parent-arranged review-required envelope rather than claim a checked final. Revisions to proposed facts require a new packet and affected independent recheck; preserve old packet/results and identify exactly which packet supports the final claims. Reconciliation and factual review receipts may be added afterward, but new consequential assertions need review.
+
 ## Parent-arranged route
 
 When the Research Agent cannot spawn its reviewer, return this envelope through normal completion:

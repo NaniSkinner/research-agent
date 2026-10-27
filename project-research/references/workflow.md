@@ -2,7 +2,7 @@
 
 Read the actual installed Pstack entry, runtime guidance, chosen playbook and applicable leaf skills. Copy the selected owner's named steps into the run's working note as that owner requires. Pstack owns the step list; this package must not freeze a competing list of skills or rubrics.
 
-Before repository inspection or helper execution, publish a short startup receipt identifying the selected workflow and its source/version or hash. Initialize from its runtime/portable guidance. Without a verified sticky receipt, state current-turn-only use and unverified persistence. Do not claim that invoking project-research activates sticky Poteto Mode.
+After explicitly reading the current canonical contract file and startup guidance, and before repository/history inspection or helper execution, publish a short startup receipt identifying the canonical contract path/version and selected workflow and its source/version or hash. Initialize from its runtime/portable guidance. Without a verified sticky receipt, state current-turn-only use and unverified persistence. Do not claim that invoking project-research activates sticky Poteto Mode.
 
 Carry a compact receipt with every substantive report:
 

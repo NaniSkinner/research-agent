@@ -207,5 +207,97 @@ class PackageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.manage.validate_report({'status': 'independently-checked', 'baseline': 'abc', 'claims': []})
 
+class ReviewPacketTests(unittest.TestCase):
+    setUp = PackageTests.setUp
+    def packet_inputs(self):
+        inputs = {}
+        for role in ('brief', 'report', 'ledger', 'explanation', 'workflow', 'evidence-1'):
+            path = self.workspace / (role + '.txt')
+            path.write_bytes(role.encode() + b'\x00\xff\n')
+            inputs[role] = path
+        return inputs
+
+    def test_packet_copies_bytes_and_survives_source_changes(self):
+        inputs = self.packet_inputs()
+        output = self.workspace / 'packet'
+        receipt = self.manage.freeze_review_packet(output, inputs)
+        manifest = json.loads((output / 'manifest.json').read_text())
+        for role, source in inputs.items():
+            self.assertEqual((output / manifest['files'][role]['filename']).read_bytes(), source.read_bytes())
+            source.write_text('changed source')
+        self.assertEqual(self.manage.check_review_packet(output)['packet_id'], receipt['packet_id'])
+        self.assertEqual(receipt['scope'], 'content identity only; not dispatch or semantic proof')
+
+    def test_packet_refuses_existing_destination(self):
+        inputs = self.packet_inputs()
+        output = self.workspace / 'packet'
+        output.mkdir()
+        (output / 'keep').write_text('owned elsewhere')
+        with self.assertRaises((ValueError, OSError)):
+            self.manage.freeze_review_packet(output, inputs)
+        self.assertEqual((output / 'keep').read_text(), 'owned elsewhere')
+
+    def test_packet_rejects_missing_roles_unsafe_roles_and_linked_inputs(self):
+        inputs = self.packet_inputs()
+        for bad in ({k: v for k, v in inputs.items() if k != 'brief'},
+                    {**inputs, '../escape': inputs['brief']},
+                    {**inputs, 'manifest': inputs['brief']}):
+            with self.subTest(roles=list(bad)), self.assertRaises(ValueError):
+                self.manage.freeze_review_packet(self.workspace / 'packet', bad)
+        linked = self.workspace / 'link'
+        linked.symlink_to(inputs['brief'])
+        with self.assertRaises(ValueError):
+            self.manage.freeze_review_packet(self.workspace / 'packet', {**inputs, 'brief': linked})
+        self.assertFalse((self.workspace / 'packet').exists())
+
+    def test_packet_detects_tampering_unexpected_files_and_links(self):
+        inputs = self.packet_inputs()
+        output = self.workspace / 'packet'
+        self.manage.freeze_review_packet(output, inputs)
+        manifest_path = output / 'manifest.json'
+        original = manifest_path.read_bytes()
+        manifest = json.loads(original)
+        brief = output / manifest['files']['brief']['filename']
+        contents = brief.read_bytes()
+        brief.write_bytes(b'x' * len(contents))
+        with self.assertRaises(ValueError):
+            self.manage.check_review_packet(output)
+        brief.write_bytes(contents)
+        extra = output / 'extra'
+        extra.write_text('extra')
+        with self.assertRaises(ValueError):
+            self.manage.check_review_packet(output)
+        extra.unlink()
+        brief.unlink()
+        brief.symlink_to(inputs['brief'])
+        with self.assertRaises(ValueError):
+            self.manage.check_review_packet(output)
+        brief.unlink()
+        brief.write_bytes(contents)
+        for mutation in ('identity', 'missing', 'path', 'schema'):
+            broken = copy.deepcopy(manifest)
+            if mutation == 'identity': broken['packet_id'] = '0' * 64
+            if mutation == 'missing': del broken['files']['brief']
+            if mutation == 'path': broken['files']['brief']['filename'] = '../brief.txt'
+            if mutation == 'schema': broken['schema'] = True
+            manifest_path.write_text(json.dumps(broken))
+            with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                self.manage.check_review_packet(output)
+        manifest_path.write_bytes(original)
+
+    def test_packet_cli_roundtrip(self):
+        import subprocess
+        import sys
+        inputs = self.packet_inputs()
+        output = self.workspace / 'packet'
+        command = [sys.executable, str(ROOT / 'scripts/manage.py'), 'create-review-packet', '--output', str(output)]
+        for role, path in inputs.items():
+            command.extend(['--evidence' if role == 'evidence-1' else '--' + role, str(path)])
+        created = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(created.returncode, 0, created.stderr)
+        checked = subprocess.run([sys.executable, str(ROOT / 'scripts/manage.py'), 'check-review-packet', str(output)], capture_output=True, text=True)
+        self.assertEqual(checked.returncode, 0, checked.stderr)
+        self.assertEqual(json.loads(created.stdout)['packet_id'], json.loads(checked.stdout)['packet_id'])
+
 if __name__ == '__main__':
     unittest.main()

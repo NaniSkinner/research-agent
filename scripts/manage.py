@@ -3,6 +3,8 @@
 import argparse
 import hashlib
 import json
+import re
+import stat
 from pathlib import Path
 import sys
 import tomllib
@@ -207,6 +209,104 @@ def validate_report(report):
         raise ValueError('Review findings require explicit evidenced dispositions')
 
 
+PACKET_ROLES = frozenset({'brief', 'report', 'ledger', 'explanation', 'workflow'})
+PACKET_SCOPE = 'content identity only; not dispatch or semantic proof'
+
+
+def packet_roles(files):
+    if not isinstance(files, dict) or not PACKET_ROLES.issubset(files):
+        raise ValueError('Review packet requires brief, report, ledger, explanation and workflow')
+    for role in files:
+        if not isinstance(role, str) or not re.fullmatch(r'[a-z][a-z0-9-]{0,63}', role) or role == 'manifest':
+            raise ValueError('Unsafe or reserved packet role')
+
+
+def packet_identity(payload):
+    canonical = json.dumps(payload, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode('utf-8')
+    return hashlib.sha256(canonical).hexdigest()
+
+
+def regular_packet_file(path):
+    if not stat.S_ISREG(path.lstat().st_mode):
+        raise ValueError(f'Packet file must be regular and not linked: {path}')
+
+
+def freeze_review_packet(output: Path, inputs: dict[str, Path]):
+    """Copy a fixed byte snapshot; identity checking is not semantic validation."""
+    output = Path(output).expanduser()
+    packet_roles(inputs)
+    snapshots = {}
+    for role, source in inputs.items():
+        source = Path(source).expanduser()
+        regular_packet_file(source)
+        snapshots[role] = source.read_bytes()
+    # Exclusive mkdir reserves the destination without a replace/rename race.
+    # Only files successfully created by this invocation are eligible for cleanup.
+    output.mkdir()
+    created = []
+    try:
+        files = {}
+        for role, contents in sorted(snapshots.items()):
+            filename = role + '.bin'
+            target = output / filename
+            with target.open('xb') as stream:
+                created.append(target)
+                stream.write(contents)
+            files[role] = {'filename': filename, 'sha256': hashlib.sha256(contents).hexdigest(), 'size': len(contents)}
+        manifest = {'schema': 1, 'files': files}
+        manifest['packet_id'] = packet_identity(manifest)
+        target = output / 'manifest.json'
+        with target.open('x') as stream:
+            created.append(target)
+            stream.write(json.dumps(manifest, indent=2) + '\n')
+    except BaseException:
+        for target in reversed(created):
+            target.unlink()
+        output.rmdir()
+        raise
+    return {'packet_id': manifest['packet_id'], 'scope': PACKET_SCOPE}
+
+
+def check_review_packet(output: Path):
+    output = Path(output).expanduser()
+    if output.is_symlink() or not output.is_dir():
+        raise ValueError('Review packet must be an unlinked directory')
+    manifest_path = output / 'manifest.json'
+    regular_packet_file(manifest_path)
+    def unique_keys(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError('Duplicate manifest key')
+            result[key] = value
+        return result
+    manifest = json.loads(manifest_path.read_text(), object_pairs_hook=unique_keys)
+    if not isinstance(manifest, dict) or set(manifest) != {'schema', 'files', 'packet_id'} or type(manifest['schema']) is not int or manifest['schema'] != 1:
+        raise ValueError('Invalid packet manifest schema')
+    packet_roles(manifest['files'])
+    names = {'manifest.json'}
+    for role, entry in manifest['files'].items():
+        if not isinstance(entry, dict) or set(entry) != {'filename', 'sha256', 'size'}:
+            raise ValueError('Invalid packet file record')
+        filename = entry['filename']
+        if not isinstance(filename, str) or not re.fullmatch(r'[a-z][a-z0-9-]{0,63}\.bin', filename) or filename in names:
+            raise ValueError('Unsafe or duplicate packet filename')
+        names.add(filename)
+        if type(entry['size']) is not int or entry['size'] < 0 or not isinstance(entry['sha256'], str) or not re.fullmatch(r'[0-9a-f]{64}', entry['sha256']):
+            raise ValueError('Invalid packet size or hash')
+        target = output / filename
+        regular_packet_file(target)
+        contents = target.read_bytes()
+        if len(contents) != entry['size'] or hashlib.sha256(contents).hexdigest() != entry['sha256']:
+            raise ValueError('Packet contents changed')
+    if {p.name for p in output.iterdir()} != names:
+        raise ValueError('Unexpected packet contents')
+    payload = {key: manifest[key] for key in ('schema', 'files')}
+    if manifest['packet_id'] != packet_identity(payload):
+        raise ValueError('Packet identity mismatch')
+    return {'packet_id': manifest['packet_id'], 'scope': PACKET_SCOPE}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
@@ -223,9 +323,22 @@ def main():
     command.add_argument('--evidence-first', type=Path, required=True)
     command = sub.add_parser('validate-report')
     command.add_argument('report', type=Path)
+    command = sub.add_parser('create-review-packet')
+    command.add_argument('--output', type=Path, required=True)
+    for role in sorted(PACKET_ROLES):
+        command.add_argument('--' + role, type=Path, required=True)
+    command.add_argument('--evidence', type=Path, action='append', default=[])
+    command = sub.add_parser('check-review-packet')
+    command.add_argument('packet', type=Path)
     args = parser.parse_args()
     try:
-        if args.command == 'stage':
+        if args.command == 'create-review-packet':
+            inputs = {role: getattr(args, role) for role in PACKET_ROLES}
+            inputs.update({f'evidence-{i}': path for i, path in enumerate(args.evidence, 1)})
+            result = freeze_review_packet(args.output, inputs)
+        elif args.command == 'check-review-packet':
+            result = check_review_packet(args.packet)
+        elif args.command == 'stage':
             result = stage(args.source, args.workspace)
         elif args.command in ('check', 'remove'):
             result = globals()[args.command](args.workspace)
