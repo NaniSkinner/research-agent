@@ -46,3 +46,7 @@ See workflow-verification-results.md for implementation changes, fresh source re
 ## Fixed packets and controlled integration, versions 0.1.4–0.1.5
 
 See controlled-014-results.md. Five new packet checks brought the suite to 28 passing tests. A fresh source review, actual scoped Nessie/Exa research and a fresh behavioral assessment demonstrated fixed packet access, early canonical contract reading and supported source/history/documentation conclusions. A disclosed management isolation deviation prompted explicit helper-snapshot guidance in 0.1.5 and a separately assessed successful startup-only control. These are bounded controls, not full workflow authentication or general promotion. Original records and remaining limits are retained. No real-work run occurred; Pstack is intact.
+
+## C2.29 evidence-preservation repair, 0.1.6
+
+See c229-evidence-repair.md. New preservation instructions retain actual returned receipts and exact worker outputs before summaries, distinguish supported retrospective exports and authored transcriptions, and preserve truncation/missing fields. Existing C2.29 packet was repaired with three exact worker returns and 112 selected command records, then checked by a new fresh reviewer without repeating investigation. No new source contradiction/instruction defect was found; exact rejection and actual profile/context metadata remain unverified. All 28 package checks pass. Personal profile refreshed; no Pstack change or new full research run is claimed.

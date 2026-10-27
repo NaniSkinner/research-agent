@@ -8,9 +8,13 @@ Include the original question, authoritative requirements, allowed actions, exac
 
 Return checked claim IDs, actual sources opened, findings with IDs, missing evidence, reviewed baseline, reviewer identity and supported fresh-context metadata. Bare agreement and wording review do not satisfy source verification. The lead opens decisive evidence, reconciles each finding and preserves unresolved disagreements. Review coverage must include consequential prose outside numbered claim rows. Do not append an unreviewed missing-tool or missing-source assertion after the review. Recheck affected claims after material corrections; a different baseline requires a new fresh independent pass before an independently checked return.
 
+## Original receipts and worker outputs
+
+Read evidence.md. Save actual tool/check return values and exact worker completion text before summarizing or editing them. Include an evidence index identifying direct returns, supported retrospective exports, truncated/missing records and authored transcriptions. The reviewer must receive originals/exports for consequential operational claims and exact discovery/explanation outputs, not only a receipt written by the lead. If safe original capture/export is unavailable, preserve the affected claim as reported-not-reverified and the process gap as partial. Do not rerun work to manufacture an old receipt.
+
 ## Fixed review packet
 
-Before dispatch, write the exact standalone brief, complete proposed report, claim ledger, completed explanation and workflow receipt as separate UTF-8 files in the declared research output directory. Preserve decisive command outputs and relevant Nessie primary-message excerpts or Exa page responses as additional evidence files. Scope private excerpts to the research question; never capture credentials or unrelated history.
+Before dispatch, write the exact standalone brief, complete proposed report, claim ledger, completed explanation and workflow receipt as separate UTF-8 files in the declared research output directory. Preserve decisive original command/connector responses, original worker returns and their evidence index as additional evidence files; include relevant permitted Nessie primary messages or Exa page responses. Summaries and transcriptions stay separately labeled. Scope private excerpts to the research question; never capture credentials or unrelated history.
 
 After inspecting the existing helper, create a new packet:
 
