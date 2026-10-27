@@ -42,3 +42,7 @@ See controlled-cedar-results.md. The corrected researcher found the source facts
 ## Workflow evidence correction, versions 0.1.2–0.1.3
 
 See workflow-verification-results.md for implementation changes, fresh source reviews, 23 passing package checks, four latest controlled Cedar cases and a fresh findings assessment. Selected-owner step receipts and honest context/persistence states are implemented. Actual initial/cold startup declarations precede source investigation in observed 0.1.3 traces. Complete review-input payloads, host isolation and explicit early cold-handoff contract reload remain incompletely evidenced. No material false final source claims were found; this is bounded source-research acceptance, not full workflow authentication or general promotion. All 320 installed Pstack files are unchanged. Real-work runs remain paused.
+
+## Fixed packets and controlled integration, versions 0.1.4–0.1.5
+
+See controlled-014-results.md. Five new packet checks brought the suite to 28 passing tests. A fresh source review, actual scoped Nessie/Exa research and a fresh behavioral assessment demonstrated fixed packet access, early canonical contract reading and supported source/history/documentation conclusions. A disclosed management isolation deviation prompted explicit helper-snapshot guidance in 0.1.5 and a separately assessed successful startup-only control. These are bounded controls, not full workflow authentication or general promotion. Original records and remaining limits are retained. No real-work run occurred; Pstack is intact.

@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.4.
+Contract version 0.1.5.
 
 ## Purpose and admission
 
@@ -58,7 +58,7 @@ Before declaring a source, helper or tool unavailable, inspect its resolved loca
 
 You may read existing tests and run relevant, inspected existing checks in isolation. Before execution, inspect their command, wrappers and setup/teardown for writes, network access, credentials, databases and process effects. If effects or safe isolation cannot be established, report the proposed check without running it.
 
-Run only in an isolated snapshot or worktree, with separate temporary state and available host protections. Record the exact baseline, command, working directory, exit status, decisive output and cleanup. Do not interfere with an actively edited checkout or shared services. Clean up only run-owned resources; report anything retained or unresolved.
+Run only in an isolated snapshot or worktree, with separate temporary state and available host protections. This includes management consistency/resource/packet checks; a shared chat cwd is not isolation. For the inspected pure-file management helper, copy the unchanged helper into a run-owned disposable directory beneath the declared output directory, verify the snapshot hash, and execute that snapshot with Python -B and that directory as the working directory. Supply explicit source/profile/resource paths as read-only inputs (for check-profile, pass --source explicitly). Its scope is file identity/availability, not application execution. Retain exact command, snapshot hash, input baseline, cwd, exits and decisive outputs for review, and clean up only the owned scratch directory or document intentional retention. Do not claim that a disposable cwd alone is a security sandbox or permission enforcement. Product checks still require their own isolated product snapshot/worktree and temporary state; this management procedure does not authorize running product code against live inputs. Record the exact baseline, command, working directory, exit status, decisive output and cleanup. Do not interfere with an actively edited checkout or shared services. Clean up only run-owned resources; report anything retained or unresolved.
 
 Do not create new tests, probes or experimental scripts; modify product code; install dependencies; use paid model calls or execute checks against live product services; mutate product data; or publish changes under default research authority. Reports and captured existing-check outputs may be written to the declared research output directory. Authorized Nessie and Exa research calls remain permitted under their installed skill contracts. Additional checks require authority from the live user task; a caller cannot expand that authority on its own.
 
