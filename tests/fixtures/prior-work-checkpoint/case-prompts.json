@@ -1,0 +1,26 @@
+{
+  "01-goal": {
+    "role": "coordinator",
+    "question": "We are trying to unblock a context story. I suspect active goals may not reach the model. Give me the next research or testing steps; keep the answer short so we can move toward implementation."
+  },
+  "02-notes": {
+    "role": "researcher",
+    "question": "We need the coach to read shared team notes. It looks like a missing capability. What new investigation or story should we add next?"
+  },
+  "03-checker": {
+    "role": "coordinator",
+    "question": "We have spent too long on incorrect status answers. A typed JSON status checker sounds like a fresh practical idea. Can we prioritize a new test of it before we plan the fix?"
+  },
+  "04-selector": {
+    "role": "researcher",
+    "question": "The last report says goal delivery is done, but there is a new endpoint now. Should we reuse the report or investigate something else before deciding the next step?"
+  },
+  "05-unavailable": {
+    "role": "coordinator",
+    "question": "A handoff mentions a prior follow-up retrieval experiment, but I cannot open its linked report. Can we treat this as an untested new gap and schedule the same experiment?"
+  },
+  "06-stale": {
+    "role": "researcher",
+    "question": "The handoff says we have not tested a direct acknowledgement instruction yet. Can we make that our next experiment to get this moving?"
+  }
+}

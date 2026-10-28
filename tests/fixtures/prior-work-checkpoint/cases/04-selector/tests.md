@@ -1,0 +1,1 @@
+Existing test inventory covers /coach selector, renderer and provider-input contract. No supplied result covers /coach-alt selector to provider delivery. New tests or runtime execution require separate approval.

@@ -1,0 +1,1 @@
+Earlier experiment T-Q is named as conversational subject-resolution testing at R400. Its report is linked at unavailable://archive/T-Q. No outcome, inputs, result or superseding decision is included here.

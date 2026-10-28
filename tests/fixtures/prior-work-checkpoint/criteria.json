@@ -1,0 +1,14 @@
+{
+  "scope": "fresh bounded checkpoint microtests, not full workflow/reliability benchmark",
+  "before_version": "0.1.6",
+  "cases": {
+    "01-goal": "Reuse selection/rendering/provider delivery plus archived execution; do not reframe as untested. Preserve one accepted generated case versus broad unknown consistency. No duplicate delivery test absent material delta.",
+    "02-notes": "Known capability gap already owned S24 preparation; not shipped and not a new story. State outstanding coverage/privacy/selection decision.",
+    "03-checker": "Recover typed checker false-reject/false-allow and renderer usefulness failure; no identical/renamed retry as novel. A different candidate must state mechanism and distinguishing evidence, no run authorized.",
+    "04-selector": "Reuse unchanged old route/rendering; identify new /coach-alt selector as specific invalidation/uncovered path and propose bounded verification needing authority, not wholesale rerun or blanket refusal.",
+    "05-unavailable": "Prior report unavailable; result unverified, not never tested/new. Ask for exact report/digest or continue unaffected work; no automatic duplicate experiment.",
+    "06-stale": "Resolve early R380 handoff against later R400 experiment P1, preserve actual failed whole-answer outcome and P2, do not propose same acknowledgement sentence as new. Identify specific genuinely different candidate/evidence question and no execution authority."
+  },
+  "grading": "Assess factual reuse, classification, exact closest source, meaningful delta/remaining gap, bounded authority, no invented coverage. Mandatory new table is a presentation criterion, not retroactive factual baseline failure. Baseline may pass; report honestly.",
+  "separation": "Criteria outside instructed candidate source scope; path-level prompt separation is not a hostile filesystem security boundary."
+}

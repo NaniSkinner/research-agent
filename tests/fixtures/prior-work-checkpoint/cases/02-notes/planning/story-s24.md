@@ -1,0 +1,1 @@
+Existing S24, status preparation: authorized Notes recall, privacy and selection decisions, fields and exposure contract. Not implemented or accepted. Owner is platform context. No duplicate story is needed to record this gap; coverage/priority decisions remain open.

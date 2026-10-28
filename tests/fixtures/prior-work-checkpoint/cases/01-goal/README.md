@@ -1,0 +1,1 @@
+Controlled archived fixture, not a live project. Snapshot R410. Existing notes are in history/manifest.md; there is no application execution authority. The current blocker is deciding which platform-context questions are in scope.

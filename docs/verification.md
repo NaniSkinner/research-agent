@@ -50,3 +50,7 @@ See controlled-014-results.md. Five new packet checks brought the suite to 28 pa
 ## C2.29 evidence-preservation repair, 0.1.6
 
 See c229-evidence-repair.md. New preservation instructions retain actual returned receipts and exact worker outputs before summaries, distinguish supported retrospective exports and authored transcriptions, and preserve truncation/missing fields. Existing C2.29 packet was repaired with three exact worker returns and 112 selected command records, then checked by a new fresh reviewer without repeating investigation. No new source contradiction/instruction defect was found; exact rejection and actual profile/context metadata remain unverified. All 28 package checks pass. Personal profile refreshed; no Pstack change or new full research run is claimed.
+
+## Prior-work checkpoint, 0.1.7
+
+See prior-work-checkpoint-results.md for six paired fresh-worker response exercises covering established work, existing ownership, failed approaches, changed paths, unavailable evidence and stale handoffs. Both variants handled all six cases correctly; no measured improvement or reproduction of the long-chat failure is claimed. The new explicit source-backed comparison applies to the researcher, caller and independent reviewer. All 28 package tests pass; full workflow and long-context acceptance are outside these controls.

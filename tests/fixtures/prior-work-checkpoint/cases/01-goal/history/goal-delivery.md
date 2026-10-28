@@ -1,0 +1,1 @@
+At R400, DB selection assertions verify newest active goal ahead of drafts. Rendering assertions verify goal text, alignment and plan fields. Both provider adapters have fake-stream input assertions. These prove their delivery contract, not broad generated understanding.

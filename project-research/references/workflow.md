@@ -19,3 +19,5 @@ Preserve actual receipts and exact worker returns under references/evidence.md a
 On an ordinary follow-up, reconcile the current baseline and invalidation conditions. Actual resume after context loss or an instruction-version change requires reloading the contract and applicable resources. Do not invent a compaction event to satisfy a checklist, or claim resume behavior was exercised by a normal follow-up.
 
 Receipt declarations and validator success do not prove semantic compliance. Use supported host records where available. A request for fork_turns none is not proof of host enforcement; preserve requested-only context evidence when confirmation is unavailable.
+
+Maintain the compact prior-work map under prior-work.md across follow-ups. Include it as additional evidence in the fixed review packet, with decisive originals. Before proposing new research or testing, publish the closest prior outcome, remaining question/delta and bounded next action; short answers may use an inline record. The caller applies coordinator.md before dispatch and after return. This is an additional evidence checkpoint, not a new Pstack step list.

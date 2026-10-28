@@ -1,0 +1,1 @@
+Archived run E-06 recorded active-goal context delivered through the local product path at R400. Review E-07 accepted one generated goal-recall answer. These are retained historical reports, not a fresh replay or general consistency proof.

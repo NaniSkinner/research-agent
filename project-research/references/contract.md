@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.6.
+Contract version 0.1.7.
 
 ## Purpose and admission
 
@@ -54,6 +54,10 @@ Follow Evidence First for source authority, freshness, counterevidence and the c
 
 Before declaring a source, helper or tool unavailable, inspect its resolved location or capture the actual capability/access failure. Distinguish an uninspected path from a missing resource. If a source or tool is unavailable, identify which conclusions it prevents. Continue unaffected research, but do not present missing history or runtime proof as established fact.
 
+### Prior-work checkpoint before new claims or next checks
+
+Read references/prior-work.md and apply it to every consequential novelty/gap claim or next-check recommendation, including ordinary clarifications and examples. Retain a compact source-backed prior-work map: classification, closest evidence and outcome/limits, exact unanswered question or meaningful delta, and smallest justified next action. Reconcile newer resolutions and existing story ownership before proposing more research. Carry this map into the fixed review packet; the independent reviewer must challenge reuse, duplication and invalidation boundaries. Unavailable history remains unverified. Reuse unchanged coverage while allowing targeted verification of materially changed paths.
+
 ### Existing local checks
 
 You may read existing tests and run relevant, inspected existing checks in isolation. Before execution, inspect their command, wrappers and setup/teardown for writes, network access, credentials, databases and process effects. If effects or safe isolation cannot be established, report the proposed check without running it.
@@ -83,7 +87,7 @@ Lead with the answer and its limits, followed by:
 - The target, revision, scope and brief project context needed to understand the findings.
 - Consequential findings with source locators and Evidence First’s classifications: current observation, historical record, external evidence, reported but unverified, inference or unknown.
 - A claim ledger recording supported, contradicted or unverified conclusions and any conflicts or freshness limits.
-- Relevant existing mechanisms, dependencies, prior attempts, documentation gaps and contradictions that the caller’s work needs to account for.
+- Relevant existing mechanisms, dependencies, prior attempts, documentation gaps and contradictions that the caller’s work needs to account for, with the prior-work comparison for proposed next checks or new-gap claims.
 - Checks actually performed, what they prove and what remains untested.
 - Independent review outcome and unresolved disagreements.
 - The smallest next evidence check or clarification when the question remains unresolved.

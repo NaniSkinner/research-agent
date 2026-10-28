@@ -1,0 +1,1 @@
+At R380 the completion-recognition prompt had not been tested. Suggested next task: try an explicit teacher-report acknowledgement sentence. This handoff predates the archived campaign; it is not marked current.

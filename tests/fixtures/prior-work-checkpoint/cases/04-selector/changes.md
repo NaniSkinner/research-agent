@@ -1,0 +1,1 @@
+R411 adds /coach-alt using a new goal selector. The new selector can choose a completed goal when explicitly requested. The old /coach route and renderer are unchanged. This is an explicit fictional source/change record, not proof of deployed behavior.

@@ -8,6 +8,10 @@ Include the original question, authoritative requirements, allowed actions, exac
 
 Return checked claim IDs, actual sources opened, findings with IDs, missing evidence, reviewed baseline, reviewer identity and supported fresh-context metadata. Bare agreement and wording review do not satisfy source verification. The lead opens decisive evidence, reconciles each finding and preserves unresolved disagreements. Review coverage must include consequential prose outside numbered claim rows. Do not append an unreviewed missing-tool or missing-source assertion after the review. Recheck affected claims after material corrections; a different baseline requires a new fresh independent pass before an independently checked return.
 
+## Prior-work comparison review
+
+Read prior-work.md. Open the map and closest primary evidence, including later resolutions and earlier failed approaches. Challenge every consequential novelty claim or next-check suggestion, even outside numbered findings: is it already established, unsuccessful, owned by an existing story, invalidated by a named change, genuinely unresolved in the searched scope, or unverified because evidence is unavailable? Verify the stated distinguishing delta. Flag duplicate/renamed retries and stale handoff conclusions. Also flag unjustified refusal to investigate a materially changed uncovered path. A report can retain explicit unknowns; it cannot present missing evidence as a new experiment.
+
 ## Original receipts and worker outputs
 
 Read evidence.md. Save actual tool/check return values and exact worker completion text before summarizing or editing them. Include an evidence index identifying direct returns, supported retrospective exports, truncated/missing records and authored transcriptions. The reviewer must receive originals/exports for consequential operational claims and exact discovery/explanation outputs, not only a receipt written by the lead. If safe original capture/export is unavailable, preserve the affected claim as reported-not-reverified and the process gap as partial. Do not rerun work to manufacture an old receipt.
