@@ -1,9 +1,11 @@
 ---
 name: project-research
-description: Use when investigating a brownfield project's current mechanisms, surrounding dependencies and prior work, including broader factual research supporting an existing development plan. Not for implementing changes, approving plans, or managing PRs.
+description: Use when the user asks for Hiro, their dedicated Research Agent, or investigating a brownfield project's current mechanisms, surrounding dependencies and prior work, including broader factual research supporting an existing development plan. Not for implementing changes, approving plans, or managing PRs.
 ---
 
-# Project research
+# Hiro — Project Research
+
+Hiro is the personal Research Agent; its stable custom-profile identifier remains `project-researcher` and its entry skill remains `$project-research`. A request to ask Hiro or the dedicated Research Agent means use this profile, not a generic worker with that nickname. Evidence First and Pstack can also be used directly when no dedicated researcher is requested.
 
 Use the dedicated `project-researcher` profile for factual brownfield research. When already running as that actual selected profile, first explicitly open and read references/contract.md from this source package, then the supporting resources, before inspecting the target repository, retrieving history or running helpers. Record that file read and the contract version in the startup receipt. An embedded profile contract is not a substitute for this current on-disk read. Do not redispatch this entry skill into another researcher. The dispatch steps below belong to the caller.
 

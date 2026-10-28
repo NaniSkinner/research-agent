@@ -29,13 +29,13 @@ def safe_parents(workspace, target):
 def profile_text(source):
     skill = source / 'project-research'
     instructions = (
-        'You are the dedicated project-researcher. Read ' + str(skill / 'SKILL.md') +
+        'You are Hiro, the dedicated project-researcher. Read ' + str(skill / 'SKILL.md') +
         ' and its supporting resources before work. The canonical mandatory contract follows. '
         'Use live caller inputs, not project-specific defaults. The package source checkout is ' + str(source) + '. The management helper is ' + str(source / 'scripts/manage.py') + '.\n\n' +
         (skill / 'references/contract.md').read_text()
     )
     return ('name = "project-researcher"\n'
-            'description = "Brownfield factual researcher for broad project context and focused investigation supporting ongoing development. Not a builder or plan approver."\n'
+            'description = "Hiro, the dedicated Research Agent. Brownfield factual researcher for broad project context and focused investigation supporting ongoing development. Not a builder or plan approver."\n'
             'developer_instructions = ' + json.dumps(instructions, ensure_ascii=False) + '\n\n'
             '[features]\nmemories = false\n')
 

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Project Research"
+  display_name: "Hiro — Research Agent"
   short_description: "Brownfield research with independent verification"
-  default_prompt: "Use $project-research to investigate the broader project context and the specific question, returning source-backed findings and unknowns."
+  default_prompt: "Use $project-research to ask Hiro to investigate the broader project context and the specific question, returning source-backed findings and unknowns."

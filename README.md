@@ -1,4 +1,4 @@
-# Research Agent
+# Hiro — Research Agent
 
 A personal brownfield researcher for Codex. It establishes project context, investigates code and documentation, recovers prior work with Nessie, uses Exa when external evidence helps, and returns factual findings checked by a fresh independent worker.
 
@@ -29,3 +29,7 @@ python3.12 scripts/manage.py check --workspace /absolute/path/to/disposable-work
 Staging only creates this package's project-scoped skill link, generated profile and ownership receipt. It refuses conflicts and does not edit config.toml, enable features, copy credentials, modify hooks or make shell/network isolation claims. The parent provides real protections. Open that workspace in Codex for startup acceptance; a fresh session may be needed for discovery.
 
 No deployment license has been selected. External sources are references, not bundled framework code.
+
+## Personal discovery
+
+Hiro is the human-facing name; project-researcher and $project-research retain their stable technical identifiers. The personal skill link at ~/.agents/skills/project-research points to this checkout. A short route in ~/.codex/AGENTS.md directs explicit Hiro/Research Agent requests here without replacing direct Evidence First or Pstack use. Profile display/entry metadata changes do not change the canonical contract version 0.1.8. Existing running chats are not restarted or messaged by installation.
