@@ -9,3 +9,7 @@ Before conveying findings or launching a follow-up, inspect the researcher's com
 Carry verified reusable evidence and explicit unresolved deltas forward between assignments. Preserve original receipts and outputs under evidence.md. For an independent reviewer, supply the standalone question, requirements, baseline, complete candidate answer, prior-work map and primary evidence as objects to challenge; exclude author reasoning, self-assessment and previous reviewer verdicts. Use the existing fresh-review protocol. A continuing researcher may retain the assignment; a new independent review requires a fresh reviewer.
 
 The coordinator retains existing authority boundaries. This reference does not grant implementation, live-service execution, cross-chat messaging or product approval, and does not modify installed Pstack workflows. It governs callers using this package; it does not silently change every unrelated Codex chat.
+
+## Requested handoff document
+
+A short handoff request triggers references/handoff.md. Carry its default contents into the assignment and inspect the document for omitted decisions, source/revision limits, existing ownership and prior outcomes. Do not require the user to restate the format. The receiving agent begins with source reconciliation and planning; document creation adds no execution or messaging authority.

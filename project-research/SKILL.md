@@ -16,3 +16,5 @@ Before dispatch and after return, apply the prior-work comparison in references/
 5. Wait for the report. Inspect its decisive sources and fresh-review receipt before conveying findings at their stated evidence level. Requested-only context settings must remain source-reviewed-context-unverified; do not upgrade an authored receipt into host confirmation. If the child returns `review-required`, arrange the review described in references/review.md. Do not turn partial findings into verified conclusions.
 
 The source checkout is one directory above the resolved skill directory containing this SKILL.md. No target repo or model is a permanent role default. Missing profile/dependency/review capabilities remain visible. Do not install this package or change Pstack automatically.
+
+When asked for a handoff doc, use [the default handoff contract](references/handoff.md). A short request is enough; researcher and caller preserve its contents and existing review/authority boundaries.

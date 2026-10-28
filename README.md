@@ -6,7 +6,7 @@ The caller's plan is context for broader research, not something this role appro
 
 ## Status
 
-Version 0.1.7 is prepared for isolated testing, not promoted for general use. Structural/package checks are separate from behavioral reliability and actual Codex desktop dispatch. No default model or credential is included. No global Codex settings or hooks are changed.
+Version 0.1.8 is prepared for isolated testing, not promoted for general use. Structural/package checks are separate from behavioral reliability and actual Codex desktop dispatch. No default model or credential is included. No global Codex settings or hooks are changed.
 
 ## Contents
 

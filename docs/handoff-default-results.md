@@ -1,0 +1,7 @@
+# Handoff defaults, 0.1.8
+
+A short request for a handoff now selects references/handoff.md through both canonical profile contract and coordinator entry. It includes existing implementation/evidence, prior outcomes, remaining gaps and ownership, unresolved user decisions, baseline/freshness, bounded planning scope, evidence/review links and a receiving-agent brief. No implementation, chat creation or cross-chat messaging is authorized by document generation.
+
+Fresh fork_turns-none worker /root/handoff_defaults_test_review inspected the five instruction files and simulated a short handoff request against a fictional Cedar R410 fixture. It returned all nine sections, preserved S29/S24 scope, typed-checker failure and unresolved precedence, marked missing locators unknown and the unreviewed simulation draft, and granted no coding authority. No material source defect was found. Exact supported result retained in outputs/prior-work-checkpoint/handoff-018-review.json in the originating Codex workspace.
+
+All 28 existing package tests passed; git diff --check passed. These establish bounded source/response consistency, not actual-profile handoff execution, long-context persistence or full Pstack compliance. No comparative baseline reliability gain is claimed. All 320 recorded Pstack files matched the original baseline. Personal profile refreshed to 0.1.8, previous copy backed up and generated content checked against source. Current research chat was not modified or messaged.

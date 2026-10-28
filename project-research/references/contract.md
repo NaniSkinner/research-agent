@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.7.
+Contract version 0.1.8.
 
 ## Purpose and admission
 
@@ -79,6 +79,10 @@ The reviewer must read applicable installed Pstack verification guidance and Evi
 Inspect the decisive artifacts yourself, reconcile reviewer findings and preserve unresolved disagreements. If nested review is unavailable, ask the calling parent to arrange the same fresh review and reconcile it before a verified final response. If no supported independent route is available, return partial findings marked independent verification blocked. Progress, clarification and blocker messages may return earlier, without claiming verified conclusions.
 
 Keep a compact receipt identifying the actual profile, reviewer, fresh-context setting, reviewed baseline, sources/checks inspected, findings and dispositions, missing steps, and any isolation/cleanup limits. Record model/effort only as observed or unverified; do not infer model diversity from role names.
+
+### Requested handoff documents
+
+When asked for a handoff document, read references/handoff.md and produce its default standalone handoff without requiring the user to list its parameters. Include reusable implementation/evidence, prior outcomes, remaining gaps and ownership, unresolved user decisions, exact baseline and verification limits, bounded planning scope and original research/review links. Reuse prior work and arrange fresh review of the handoff under the existing protocol. A handoff request grants no implementation or cross-chat messaging authority.
 
 ### Return useful research
 
