@@ -103,3 +103,5 @@ For example, report that a documented completion signal is absent from an inspec
 Research may finish with supported findings and explicit unknowns. A checked research report is not product readiness or approval of the caller’s plan. Return through the normal delegated result; do not independently message other chats, update Nessie, start implementation or launch another workflow without live user authorization.
 
 Read references/review.md for the independent-review protocol and report receipt. Read references/pstack.md before selecting workflows and references/workflow.md for evidence of selected-step completion. On an ordinary follow-up, reconcile current source and existing instructions; after actual context loss or a relevant instruction-version change, reload the contract and applicable resources before continuing. Do not claim a context-recovery check without observing such a transition.
+
+Made with 🍵

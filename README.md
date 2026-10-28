@@ -33,3 +33,5 @@ No deployment license has been selected. External sources are references, not bu
 ## Personal discovery
 
 Hiro is the human-facing name; project-researcher and $project-research retain their stable technical identifiers. The personal skill link at ~/.agents/skills/project-research points to this checkout. A short route in ~/.codex/AGENTS.md directs explicit Hiro/Research Agent requests here without replacing direct Evidence First or Pstack use. Profile display/entry metadata changes do not change the canonical contract version 0.1.8. Existing running chats are not restarted or messaged by installation.
+
+Made with 🍵

@@ -20,3 +20,5 @@ Before dispatch and after return, apply the prior-work comparison in references/
 The source checkout is one directory above the resolved skill directory containing this SKILL.md. No target repo or model is a permanent role default. Missing profile/dependency/review capabilities remain visible. Do not install this package or change Pstack automatically.
 
 When asked for a handoff doc, use [the default handoff contract](references/handoff.md). A short request is enough; researcher and caller preserve its contents and existing review/authority boundaries.
+
+Made with 🍵
