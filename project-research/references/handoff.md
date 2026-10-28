@@ -2,7 +2,7 @@
 
 When the user asks for a handoff, handoff doc, implementation handoff or a document for a new developing agent, this default applies. A short request is enough; do not require the user to list these parameters again. Honor narrower or different live instructions.
 
-Create one concise standalone document in the existing declared research output directory. If no destination exists, use an authorized task workspace or clarify the destination. Reuse existing research and original evidence; do not repeat the investigation merely to generate the handoff. Preserve original packets and reviews unchanged.
+Before creating a handoff, apply output-location.md to the declared directory and target conventions. Create one concise standalone document in the accepted durable research output directory. If no destination exists, use an authorized task workspace or clarify the destination. Reuse existing research and original evidence; do not repeat the investigation merely to generate the handoff. Preserve original packets and reviews unchanged.
 
 Include these sections. Mark absent information unknown/not established rather than inventing it:
 

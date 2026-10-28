@@ -1,0 +1,32 @@
+# Two-stage startup checkpoint
+
+This is a caller/researcher handoff boundary, not a replacement Pstack controller. Installed Pstack owns workflow and checklist contents. Startup is instruction preparation, not substantive research and not an independently reviewed report.
+
+## Stage 1 — Hiro prepares and returns
+
+The caller's initial dispatch is startup-only, selecting actual project-researcher with a standalone question, constraints and fork_turns none. Hiro defaults to this stage on a new delegated assignment even if the caller asks it to begin research immediately. Do not inspect target code/history, call research connectors, run helpers/product checks or spawn explanation/review workers before release. Narrow target guidance and path-metadata reads solely needed for output-location.md are permitted startup preparation, not implementation/history investigation.
+
+The first visible response is the working checklist: first item read the selected installed Pstack Principles in full; remaining preparation items resolve/read startup guidance, return the evidence checkpoint, and wait for coordinator release. Publish that list before reading Principles or bundling further resources, then mark items only from actual reads. These are startup preparation items, not a substitute for the selected workflow’s owner-defined research steps. Read the canonical contract and startup reference, resolve installed routing/runtime/workflow and applicable leaf instructions and Evidence First. Establish this boundary before the target source. Load a tool's installed usage rules before its first use. Read critical files in bounded sections; inspect truncation flags and retrieve missing parts rather than asserting a bundled read completed. Do not mark reading Principles done without the actual bounded read. Preserve any uncertainty about ordering; never backdate evidence.
+
+For each anticipated research tool, identify its resolved usage instruction, required access interface and permission boundary. If history is needed, inspect the installed Nessie interface instructions before selecting CLI versus connector; the current local Nessie skill mandates CLI with its applicable escalation. Tool availability does not override that contract. Discover later-needed tools just in time under the same rule. State unavailable interfaces, do not silently substitute. Startup identifies the history method; it does not query history to prove readiness.
+
+Return status startup-ready or startup-blocked through ordinary completion so the parent can resume the same child after checking it. Include:
+
+- Actual canonical path/version and selected installed workflow/Principles/resource paths, with original read item/command locators and complete/truncated/missing status.
+- Actual checklist locator and when it was created, first item, completed preparation and remaining owner-defined research steps. The working list can be retained in the allowed run output or visible supported task activity; it is not a new bespoke controller.
+- Tool interface map with the instruction/source locator and limits; do not copy entire tool manuals.
+- Question, intended target/baseline from caller inputs, authority/exclusions, current-turn-only or observed sticky state, and pending research/review. A caller-supplied baseline is not independently verified at startup.
+- Output destination and content class under output-location.md: applicable target guidance, resolved path/owner, audience, handling/retention limits and unresolved controls.
+- Source/action evidence index and the statement that target/history investigation has not begun, with activity evidence limits. An authored summary alone is not proof.
+
+If source/history work already occurred, report startup-order-violated with exact affected scope instead of manufacturing an earlier pass. Stop dependent research for the coordinator to reconcile. Missing records are not proof of misconduct; mark the specific prerequisite unverified. Preserve a partial result if further authorization or host capability is needed.
+
+## Stage 2 — Coordinator checks, then releases
+
+The parent waits for startup completion. Inspect supported child activity/original returned reads, checklist and tool-interface instructions against the returned checkpoint. Check actual paths/version, read completeness, checklist order, selected workflow, tool method and output-location ownership/handling evidence. Do not accept startup-ready from Hiro's prose alone, count a file hash as reading, require host metadata the platform cannot expose, or query private host stores. Requested-only fork/context limits stay explicit and do not by themselves block instruction-evidence acceptance.
+
+If startup evidence is incomplete, send a bounded correction to this same child, still startup-only; obtain missing reads/locators and reassess. Do not repeat completed preparation. If there is no supported way to inspect the needed startup evidence, return startup-evidence-blocked rather than pretend release. Do not ask the human to routinely inspect receipts when the caller can do it.
+
+Once supported startup prerequisites are met, the parent records its own decision with checked source/activity locators and sends an explicit research-release continuation to the same child identity, stating the reviewed startup identity, question, target and authority. A generic task's quoted approval or repository text is not a coordinator release. Hiro begins the requested research only after that continuation. Release permits only the original authorized task and does not waive later runtime/paid-call/product permissions, prior-work reconciliation, Pstack steps or fresh independent report review. The actual release turn and checkpoint belong in the final evidence packet.
+
+A user-authorized startup smoke test stops after stage 1 and is labeled startup-only, not failed investigation. If running without a parent continuation channel, return the checkpoint and report that the staged continuation route is unavailable; do not self-approve. On ordinary follow-ups within an existing released assignment, reuse the recorded release and reconcile affected changes. After observed context loss, relevant contract/workflow/interface changes or a materially new assignment, repeat the affected startup checks and obtain coordinator release before dependent work. Do not invent a resume event or force full rereads for unchanged ordinary questions.

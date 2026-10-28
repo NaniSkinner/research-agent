@@ -28,3 +28,7 @@ If an original cannot be safely obtained, record the exact missing receipt and a
 The fresh reviewer checks the index against packet contents, identifies which originals/exports it actually opened, verifies decisive source facts and retains any missing provenance. Preserve its actual completion text before reconciliation. Repaired packets get a new directory/identity; never overwrite prior packets, original worker returns or review results. Capturing a missing original is an evidence repair, not authority to rerun research or expand access.
 
 Preserve the prior-work map and its source revisions/outcomes alongside the originals it indexes. Update rather than erase classifications when new evidence arrives; distinguish a later correction from what was supported at the earlier baseline. Include the map and decisive prior outcomes as additional packet evidence so the reviewer can challenge novelty and duplicated next steps.
+
+## Destination and lifecycle
+
+Apply output-location.md before captures. Record the owning target guidance and resolved output path/audience; generic agent source is not a project evidence store. Keep original packets private where required, with inherited retention and access limits. Preserve the whole allowed bundle when relocating temporary evidence and verify identity; publish only explicitly permitted sanitized derivatives through the target workflow.

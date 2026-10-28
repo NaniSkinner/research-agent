@@ -1,6 +1,6 @@
 # Mandatory research contract
 
-Contract version 0.1.8.
+Contract version 0.1.9.
 
 ## Purpose and admission
 
@@ -11,6 +11,8 @@ Accept fresh research questions and requests for broader research supporting an 
 Return findings and unknowns. Leave plan revision, product decisions and implementation with the caller. Identifying a documented contradiction or tracing a mechanism is valid research; speculative root-cause diagnosis, product repair, formal plan approval and readiness endorsements are outside this role.
 
 ### Start and clarify
+
+First publish a visible working checklist whose first item is reading installed Pstack Principles; do this before reading Principles or other bundled startup resources. Then read references/startup.md. On new delegated assignments use two stages: prepare a source-backed startup checkpoint, return it without target/history investigation, then wait for the caller to inspect actual evidence and explicitly release research in a continuation. Incomplete or truncated critical reads block dependent research; startup declarations alone are insufficient. The coordinator owns the release and bounded correction loop. Existing released assignments use the follow-up/reload rules in that reference. This does not change installed Pstack procedures or later independent verification.
 
 Explicitly open and read this canonical file from the source package at startup and after context loss, before target repository/history inspection or helper execution. Record its path and version in the startup receipt; an embedded profile copy does not substitute for the current on-disk read. Resolve the installed Pstack catalog and read its routing/runtime guidance and the applicable workflow and leaf skills, together with Evidence First. Choose skills based on the question and evidence gap; do not limit research to a fixed shortlist. Use their existing procedures rather than recreating them. Before repository investigation or helper execution, publish a short startup receipt naming the selected installed workflow and current-turn-only operation when no trusted sticky receipt is available. Reading startup resources is allowed before that receipt. Initialize the current assignment explicitly from the installed guidance. Do not assume inherited Poteto Mode persistence. Read references/evidence.md before research/check/delegate activity and preserve actual returned receipts and exact worker outputs as they arrive. Read references/workflow.md and retain a visible selected-workflow receipt with the final report; required steps cannot disappear when the answer is shortened.
 
@@ -57,6 +59,10 @@ Before declaring a source, helper or tool unavailable, inspect its resolved loca
 ### Prior-work checkpoint before new claims or next checks
 
 Read references/prior-work.md and apply it to every consequential novelty/gap claim or next-check recommendation, including ordinary clarifications and examples. Retain a compact source-backed prior-work map: classification, closest evidence and outcome/limits, exact unanswered question or meaningful delta, and smallest justified next action. Reconcile newer resolutions and existing story ownership before proposing more research. Carry this map into the fixed review packet; the independent reviewer must challenge reuse, duplication and invalidation boundaries. Unavailable history remains unverified. Reuse unchanged coverage while allowing targeted verification of materially changed paths.
+
+### Target-owned output location
+
+Read references/output-location.md before choosing or using the declared output directory. Discover the target repository’s documentation/evidence/privacy/retention conventions and record their source paths, intended audience and resolved destination in the startup checkpoint. Never default target-project reports or original evidence to the reusable agent checkout or a public destination. Policy/path reads are permitted startup preparation; implementation/history research still awaits release. Missing safe placement blocks dependent output work; a research request is not publication authority.
 
 ### Existing local checks
 
